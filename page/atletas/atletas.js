@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const atletasList = document.getElementById("atletas-list");
 
     try {
-        const response = await fetch("https://backend-volleytics-development.up.railway.app//atletas");
+        const response = await fetch("https://backend-volleytics-development.up.railway.app/atletas");
         let atletas = await response.json();
         atletas = atletas.sort((a, b) => b.media - a.media);
 
@@ -91,7 +91,7 @@ function confirmNumAtletasPorTime() {
     fecharPopupTimes();
     
     // Continua a lógica de sorteio após a seleção
-    fetch("https://backend-volleytics-development.up.railway.app//atletas")
+    fetch("https://backend-volleytics-development.up.railway.app/atletas")
         .then(response => response.json())
         .then(atletas => {
             const selectedAtletas = document.querySelectorAll('input[name="atleta"]:checked');
@@ -182,7 +182,7 @@ function showDeletePopup(atletaId) {
 
 function confirmPopup() {
     if (atletaToDelete !== null) {
-        fetch(`https://backend-volleytics-development.up.railway.app//atletas/${atletaToDelete}`, { method: 'DELETE' })
+        fetch(`https://backend-volleytics-development.up.railway.app/atletas/${atletaToDelete}`, { method: 'DELETE' })
             .then(response => response.json())
             .then(() => {
                 fecharPopupConfirm();
