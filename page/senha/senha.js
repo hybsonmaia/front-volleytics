@@ -11,7 +11,7 @@ function resetarSenha() {
     }
 
     // Enviar o e-mail para o servidor (exemplo)
-    fetch("http://localhost:3000/resetar-senha", {
+    fetch("https://backend-volleytics-development.up.railway.app/resetar-senha", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

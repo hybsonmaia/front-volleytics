@@ -18,7 +18,7 @@ async function fazerLogin() {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/login", {
+    const response = await fetch("https://backend-volleytics-development.up.railway.app/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email.value, senha: senha.value }),
