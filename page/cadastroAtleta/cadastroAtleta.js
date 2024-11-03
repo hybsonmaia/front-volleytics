@@ -86,3 +86,9 @@ function limparFormulario() {
   document.getElementById("nivelSaque").value = "";
   document.getElementById("nivelToque").value = "";
 }
+
+function logout() {
+  localStorage.removeItem('token');
+
+  window.location.href = '../front-volleytics/page/index.html';
+}

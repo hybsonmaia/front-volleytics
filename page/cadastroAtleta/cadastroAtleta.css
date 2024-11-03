@@ -156,6 +156,45 @@ button:hover {
     font-weight: 400;
 }
 
+.top-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.logoff {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoff svg {
+    width: 24px;
+    height: 24px;
+    fill: #FFFFFF; /* Cor do ícone */
+}
+
+.logoff:hover svg {
+    fill: #cccccc; /* Cor ao passar o mouse (opcional) */
+}
+
+.icon-button {
+    width: auto;
+    max-width: none;
+    padding: 0;
+    background: none;
+    border: none;
+    margin-top: 0;
+    border-radius: 0;
+    transition: none;
+}
+
+.icon-button:hover {
+    background: none;
+}
+
 /* Responsividade para telas menores que 300px */
 @media (max-width: 300px) {
     .verAtletas {

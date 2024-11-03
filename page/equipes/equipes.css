@@ -102,3 +102,14 @@ h2 {
     font-size: 1.2em;
 }
 
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 14px;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 1000;
+}
