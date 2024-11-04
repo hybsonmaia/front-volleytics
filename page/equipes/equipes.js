@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Evento para ocultar o tooltip ao clicar fora em dispositivos móveis
     document.addEventListener("touchstart", (event) => {
         if (tooltip && !event.target.closest(".athlete-name")) {
             tooltip.remove();
