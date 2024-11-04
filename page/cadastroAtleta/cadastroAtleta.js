@@ -90,5 +90,5 @@ function limparFormulario() {
 function logout() {
   localStorage.removeItem('token');
 
-  window.location.href = '../front-volleytics/page/index.html';
+  window.location.href = '../login/login.html';
 }
