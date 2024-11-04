@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const teamsList = document.getElementById("teams-list");
     const teams = JSON.parse(localStorage.getItem("equipesGeradas"));
+    let tooltip;  // Declara o tooltip globalmente
 
     // Função para gerar estrelas com base na média
     const generateStars = (media) => {
@@ -45,8 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Adiciona eventos para mostrar e ocultar o tooltip
     document.querySelectorAll(".athlete-name").forEach(atletaElement => {
-        let tooltip;
-        
         atletaElement.addEventListener("mouseover", (event) => {
             const info = atletaElement.getAttribute("data-info");
             tooltip = createTooltip(info);
@@ -67,5 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 tooltip = null;
             }
         });
+    });
+
+    // Evento para ocultar o tooltip ao clicar fora em dispositivos móveis
+    document.addEventListener("touchstart", (event) => {
+        if (tooltip && !event.target.closest(".athlete-name")) {
+            tooltip.remove();
+            tooltip = null;
+        }
     });
 });
