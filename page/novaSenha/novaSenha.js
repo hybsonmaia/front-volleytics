@@ -22,7 +22,8 @@ function definirNovaSenha() {
     }
 
     // Enviar a nova senha para o servidor (exemplo)
-    fetch("https://backend-volleytics-development.up.railway.app/definir-nova-senha", {
+    // fetch("https://backend-volleytics-development.up.railway.app/definir-nova-senha", {
+        fetch("http://localhost:3000/definir-nova-senha", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

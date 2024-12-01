@@ -163,18 +163,6 @@ button:hover {
     z-index: 1000;
 }
 
-.logoff {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logoff svg {
-    width: 24px;
-    height: 24px;
-    fill: #FFFFFF; /* Cor do ícone */
-}
 
 .logoff:hover svg {
     fill: #cccccc; /* Cor ao passar o mouse (opcional) */

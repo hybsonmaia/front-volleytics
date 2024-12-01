@@ -23,7 +23,8 @@ async function fazerCadastro() {
     };
 
     try {
-      const response = await fetch("https://backend-volleytics-development.up.railway.app/organizadores", {
+      // const response = await fetch("https://backend-volleytics-development.up.railway.app/organizadores", {
+        const response = await fetch("http://localhost:3000/organizadores", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

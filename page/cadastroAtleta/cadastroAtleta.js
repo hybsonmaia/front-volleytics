@@ -27,7 +27,8 @@ function cadastrarAtleta() {
       peladaId: getPeladaId(),
     };
 
-    fetch("https://backend-volleytics-development.up.railway.app/atletas", {
+    // fetch("https://backend-volleytics-development.up.railway.app/atletas", {
+      fetch("http://localhost:3000/atletas", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
